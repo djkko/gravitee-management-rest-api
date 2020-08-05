@@ -80,7 +80,9 @@ public class SubscriptionsResource extends AbstractResource {
             newSubscriptionEntity.setApplication(subscriptionInput.getApplication());
             newSubscriptionEntity.setPlan(subscriptionInput.getPlan());
             newSubscriptionEntity.setRequest(subscriptionInput.getRequest());
-
+            newSubscriptionEntity.setGeneralConditionsAccepted(subscriptionInput.getGeneralConditionsAccepted());
+            newSubscriptionEntity.setGeneralConditionsContent(subscriptionInput.getGeneralConditionsContent());
+            newSubscriptionEntity.setGeneralConditionsRef(subscriptionInput.getGeneralConditionsRef());
             SubscriptionEntity createdSubscription = subscriptionService.create(newSubscriptionEntity);
 
             return Response
